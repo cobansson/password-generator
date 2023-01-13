@@ -10,8 +10,6 @@ let pw2 = document.getElementById("pw2");
 let pw3 = document.getElementById("pw3");
 let pw4 = document.getElementById("pw4");
 
-let copiedPassword = "";
-
 generatePw.addEventListener("click", generatePassword);
 
 function generateRandomIndex() {
@@ -55,24 +53,33 @@ function generatePassword() {
 }
 
 function copyPassword1() {
-    copiedPassword = pw1.value;
-    navigator.clipboard.writeText(copiedPassword);
+    if (pw1.value) {
+        let copiedPassword = pw1.value;
+        navigator.clipboard.writeText(copiedPassword);
+    }
 }
 
 function copyPassword2() {
-    copiedPassword = pw2.value;
-    navigator.clipboard.writeText(copiedPassword);
+    if (pw2.value) {
+        let copiedPassword = pw2.value;
+        navigator.clipboard.writeText(copiedPassword);
+    }
 }
 
 function copyPassword3() {
-    copiedPassword = pw3.value;
-    navigator.clipboard.writeText(copiedPassword);
+    if (pw3.value) {
+        let copiedPassword = pw3.value;
+        navigator.clipboard.writeText(copiedPassword);
+    }
 }
 
 function copyPassword4() {
-    copiedPassword = pw4.value;
-    navigator.clipboard.writeText(copiedPassword);
+    if (pw4.value) {
+        let copiedPassword = pw4.value;
+        navigator.clipboard.writeText(copiedPassword);
+    }
 }
+
 
 function togglePw() {
     if (pw1.type === "password" 
