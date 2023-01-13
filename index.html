@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Generate Random Password</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Karla Font API -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap" rel="stylesheet">
+        <!-- Meta Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <div class="create-section">
+                    <h1>Generate a</h1>
+                    <span>random password</span>
+                    <p>Never use an insecure password again.</p>
+                    <div class="button-section">
+                        <div class="password-length">
+                            <p>Password length:<span class="value" id="value"></span></p>
+                            <input type="range" min="8" max="15" value="12" class="slider" id="pwRange" oninput="renderPasswordLength()">
+                        </div>
+                        <div class="toggle-and-button-section">
+                            <button id="generate-password">Generate password</button>
+                            <div class="toggle-section">
+                                <input type="checkbox" class="checkbox" onclick="togglePw()">
+                                <h4 class="show-password">Show Password</h4>
+                            </div>
+                        </div>
+                    </div>
+                  
+                  <div class="passwords-section">
+                        <div class="pw-column">
+                            <input type="password" class="password" id="pw1" onclick="copyPassword1();" readonly>
+                            <input type="password" class="password" id="pw2" onclick="copyPassword2();" readonly>
+                        </div>
+                        <div class="pw-column">
+                            <input type="password" class="password" id="pw3" onclick="copyPassword3();" readonly>
+                            <input type="password" class="password" id="pw4" onclick="copyPassword4();" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>

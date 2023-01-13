@@ -1,0 +1,175 @@
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #1C1C1C;
+}
+
+h1,
+span {
+    font-size: 2.5rem;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-top: 2em;
+    font-weight: bold;
+}
+
+span {
+    margin-top: 0;
+    color: #4ADF86;
+    font-weight: bold;
+}
+
+p {
+    color: #D5D4D8;
+    margin: 0.8em auto 0.4em;
+}
+
+button {
+    font-family: 'Karla', sans-serif;
+    width: 200px;
+    height: 2.3em ;
+    border: none;
+    border-radius: 6px;
+    background-color: #10B981;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 2em auto 2em 0;
+}
+
+input {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    margin-top: 0;
+}
+
+.main {
+    width: 550px;
+    height: 550px;
+    background-color: #1F2937;
+    margin: 4em auto;
+    border-radius: 5px;
+}
+
+.password-length {
+    margin-top: 1.8em;
+    width: 380px;
+    padding: 0;
+}
+
+.value {
+    color: #4ADF86;
+    font-size: 1.1rem;
+}
+
+.create-section,
+.password-section,
+.button-section {
+    margin: 0 auto;
+    width: 440px;
+}
+
+.create-section {
+    padding-top: 1em;
+    border-bottom: #2F3E53 1px solid;
+}
+
+.passwords-section {
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-between;
+    width: 440px;
+}
+
+.pw-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.password {
+    font-family: 'Karla', sans-serif;
+    color: #4ADF86;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    padding: auto;
+    background-color: #273549;
+    text-align: center;
+    margin: 0.5em auto;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+.toggle-and-button-section {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-section {
+    width: 200px;
+    height: 2.3em;
+    border: none;
+    border-radius: 6px;
+    background: #cac8c8;
+    font-size: 1rem;
+    color: #035f41;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.checkbox {
+    margin: 0;
+    accent-color: #4ADF86;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.show-password {
+    padding: 0;
+    margin: 0;
+}
+
+/* Slide Container */
+
+.slider {
+    -webkit-appearance: none;
+    width: 51%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
