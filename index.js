@@ -12,74 +12,35 @@ let pw4 = document.getElementById("pw4");
 
 generatePw.addEventListener("click", generatePassword);
 
-function generateRandomIndex() {
+function generateRandomCharacter() {
     const randomIndex = Math.floor(Math.random() * characters.length);
     return characters[randomIndex];
 }
 
 function generatePassword() {
-    let pwArray1 = [];
-    let pwArray2 = [];
-    let pwArray3 = [];
-    let pwArray4 = [];
-
     pw1.value = "";
     pw2.value = "";
     pw3.value = "";
     pw4.value = "";
 
     for (let i = 0; i < pwRange.value; i++) {
-        pwArray1.push([generateRandomIndex()]);
-        pwArray2.push([generateRandomIndex()]);
-        pwArray3.push([generateRandomIndex()]);
-        pwArray4.push([generateRandomIndex()]);
-    }
-
-    for (let i = 0; i < pwArray1.length; i++) {
-        pw1.value += pwArray1[i];
-    }
-
-    for (let i = 0; i < pwArray2.length; i++) {
-        pw2.value += pwArray2[i];
-    }
-
-    for (let i = 0; i < pwArray3.length; i++) {
-        pw3.value += pwArray3[i];
-    }
-
-    for (let i = 0; i < pwArray4.length; i++) {
-        pw4.value += pwArray4[i];
+        pw1.value += generateRandomCharacter();
+        pw2.value += generateRandomCharacter();
+        pw3.value += generateRandomCharacter();
+        pw4.value += generateRandomCharacter();
     }
 }
 
-function copyPassword1() {
-    if (pw1.value) {
-        let copiedPassword = pw1.value;
+function copyPassword(passwordID) {
+    let passID = Number(passwordID) - 1;
+
+    let pass = document.getElementsByClassName("password")[passID];
+
+    if (pass.value) {
+        let copiedPassword = pass.value;
         navigator.clipboard.writeText(copiedPassword);
     }
 }
-
-function copyPassword2() {
-    if (pw2.value) {
-        let copiedPassword = pw2.value;
-        navigator.clipboard.writeText(copiedPassword);
-    }
-}
-
-function copyPassword3() {
-    if (pw3.value) {
-        let copiedPassword = pw3.value;
-        navigator.clipboard.writeText(copiedPassword);
-    }
-}
-
-function copyPassword4() {
-    if (pw4.value) {
-        let copiedPassword = pw4.value;
-        navigator.clipboard.writeText(copiedPassword);
-    }
-}
-
 
 function togglePw() {
     if (pw1.type === "password" 
