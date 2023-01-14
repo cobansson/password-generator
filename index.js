@@ -38,7 +38,11 @@ function copyPassword(passwordID) {
 
     if (pass.value) {
         let copiedPassword = pass.value;
-        navigator.clipboard.writeText(copiedPassword);
+        navigator.clipboard.writeText(copiedPassword).then(function() {
+            alert("Copied successfully!");
+        })
+    } else {
+        alert("You need to create passwords to create!");
     }
 }
 
